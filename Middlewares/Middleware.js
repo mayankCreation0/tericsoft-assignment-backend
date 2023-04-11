@@ -4,13 +4,12 @@ require('dotenv').config();
 const auth = (req, res, next) => {
     try {
         let token = req.headers.authorization;
-        // console.log(token);
         if (token) {
             token = token.split(" ")[1];
             console.log(token);
             let user = jwt.verify(token, "tericsoft-project-by-mayank");
             req.userid = user.id;
-            // console.log(user._id)
+            console.log(user.id)
             // console.log(req.userid);
         }
         else {

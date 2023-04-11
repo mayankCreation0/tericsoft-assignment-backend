@@ -6,8 +6,8 @@ const DataRouter = express.Router();
 
 const asyncHandler = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
 
-DataRouter.get('/profile/:id', auth, asyncHandler(getDetails));
-DataRouter.get('/history',auth, asyncHandler(getUserHistory));
-DataRouter.post('/bmi-calulation',auth, asyncHandler(bmiCalculation));
+DataRouter.get('/profile/:id', asyncHandler(getDetails));
+DataRouter.get('/history', asyncHandler(getUserHistory));
+DataRouter.post('/bmi-calulation', asyncHandler(bmiCalculation));
 
 module.exports = DataRouter;
