@@ -2,8 +2,7 @@ const BmiModel = require('../models/BmiModel');
 
 const bmiCalculation = async (req, res) => {
     try {
-        const { height, weight } = req.body;
-        const user = req.userid;
+        const { height, weight ,user} = req.body;
         const heightInMeter = (height * 0.305)
         const bmi = weight / Math.pow(heightInMeter, 2);
 
