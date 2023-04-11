@@ -1,6 +1,6 @@
 const express = require('express');
 const {getUserHistory , getDetails} = require('../controllers/UserController')
-const {bmiCalculation} = require('../controllers/BmiController')
+const { bmiCalculation } = require('../controllers/BmiController')
 const auth = require('../Middlewares/Middleware');
 const DataRouter = express.Router();
 
