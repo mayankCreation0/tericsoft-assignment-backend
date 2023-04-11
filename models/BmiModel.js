@@ -14,8 +14,9 @@ const bmiSchema = new mongoose.Schema({
     },
     bmi: {
         type:Number,
-        required:true
+
     },
+
     createdAt: {
         type: Date,
         default: () => new Date().toISOString().substring(0, 10),

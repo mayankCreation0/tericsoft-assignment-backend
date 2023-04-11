@@ -65,7 +65,7 @@ const getUserHistory = async (req, res) => {
     try {
         const { uid } = req.params;
         console.log("hids",uid)
-        const calculations = await BmiModel.findById( uid );
+        const calculations = await BmiModel.find( {user:uid} );
         return res.json({ calculations });
     } catch (err) {
         console.log(err);
