@@ -8,7 +8,7 @@ const auth = (req, res, next) => {
         if (token) {
             token = token.split(" ")[1];
             console.log(token);
-            let user = jwt.verify(token, process.env.SECRET_KEY);
+            let user = jwt.verify(token, "tericsoft-project-by-mayank");
             req.userid = user.id;
             // console.log(user._id)
             // console.log(req.userid);

@@ -38,7 +38,7 @@ const login = async (req, res) => {
         }
         const token = jwt.sign(
             { email: existingUser.email, id: existingUser._id },
-            process.env.SECRET_KEY
+            "tericsoft - project - by - mayank"
         );
         return res.status(200).json({ user: existingUser, token: token });
     } catch (err) {
